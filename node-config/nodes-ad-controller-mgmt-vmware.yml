@@ -11,7 +11,7 @@ nodes:
     app_name: ad_mgmt
     networks:
     - name: mgmt
-      ip: 192.168.1.37
+      ip: 192.168.1.38
       netmask: 255.255.255.0
       gateway: 192.168.1.254
       domain: home.ad
