@@ -22,7 +22,8 @@ nodes:
     memory: 6144
     cpu: 2
     template: windows-2019-standard-core
-    datastore: datastore1
+    snapshot_src: Linked
+    linked_clone: True
     customization:
       autologon: True
       orgname: Ansible
