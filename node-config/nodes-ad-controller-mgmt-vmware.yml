@@ -21,7 +21,7 @@ nodes:
     domain: home.ad
     memory: 6144
     cpu: 2
-    template: windows-2019
+    template: windows-2019-standard-core
     snapshot_src: Linked
     linked_clone: True
     customization:
