@@ -1,0 +1,24 @@
+---
+
+nodes:
+  - name: winad01
+    role: ad_controller
+    app_name: ad_mgmt
+    environment: dev
+    domain: home.ad
+    memory: 6144
+    cpu: 2
+    ports:
+      - port: 53 #DNS
+      - port: 88 #Kerberos auth
+      - port: 135 #RPC
+      - port: 137 #NetBIOS
+      - port: 138 #NetBIOS
+      - port: 389 #LDAP
+      - port: 445 #SMB
+      - port: 464 #Kerberos password change
+      - port: 636 #LDAP SSL
+      - port: 3268 #Global catalog
+      - port: 3269 #Global catalog
+    user_name: vagrant
+    template: "{{ win_template_name|default('windows-2022-standard-core') }}"

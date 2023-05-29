@@ -1,0 +1,14 @@
+---
+
+nodes:
+  - name: winad01
+    role: ad_controller
+    app_name: ad_mgmt
+    environment: dev
+    flavor: m1.medium
+    image: "{{ win_template_name|default('windows-2022-standard-core') }}"
+    key_name: ansible-oatakan
+    volume_size: 30
+    nics:
+      - net-name: private_network
+    os_type: windows

@@ -1,0 +1,20 @@
+---
+providers:
+  ovirt:
+    cluster: production
+
+nodes:
+  - name: winad01
+    role: ad_controller
+    app_name: ad_mgmt
+    environment: dev
+    networks:
+    - name: ovirtmgmt
+    domain: home.ad
+    memory: 6144
+    cpu: 2
+    type: server
+    user_name: vagrant
+    template: "{{ win_template_name|default('windows-2022-standard-core') }}"
+    sysprep: yes
+    ansible_port: 5986

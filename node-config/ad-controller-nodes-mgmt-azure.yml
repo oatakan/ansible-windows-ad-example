@@ -1,0 +1,14 @@
+---
+
+nodes:
+  - name: winad01
+    role: ad_controller
+    app_name: ad_mgmt
+    environment: dev
+    vm_size: Standard_D2s_v3
+    os_type: Windows
+    image:
+      sku: 2022-Datacenter-Core-smalldisk
+      publisher: MicrosoftWindowsServer
+      version: latest
+      offer: WindowsServer
